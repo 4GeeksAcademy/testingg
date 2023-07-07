@@ -1,0 +1,43 @@
+.home-container {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .movie-card {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .poster {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-details {
+    padding: 10px;
+  }
+  
+  .movie-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .release-date,
+  .overview {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
