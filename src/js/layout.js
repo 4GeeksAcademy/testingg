@@ -8,7 +8,9 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Footer } from "./component/footer";
-import App from "./views/App";
+import MovieDetails from "./component/MovieDetails";
+import ProductList from "./component/ProductList";
+import Home from "./component/Home";
 
 const Layout = () => {
   const basename = process.env.BASENAME || "";
@@ -19,7 +21,9 @@ const Layout = () => {
         <ScrollToTop>
           <Header />
           <Routes>
-            <Route path="/" element={<App />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:id" element={<MovieDetails />} />
+            <Route exact path="/movies" element={<ProductList />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/single/:theid" element={<Single />} />
             <Route path="*" element={<h1>Not found!</h1>} />
@@ -32,3 +36,4 @@ const Layout = () => {
 };
 
 export default injectContext(Layout);
+
